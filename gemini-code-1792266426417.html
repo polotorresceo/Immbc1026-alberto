@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mujeres con Propósito | Liderazgo y Bienestar</title>
+<meta name="description" content="Un espacio exclusivo para mujeres que transforman su fe y su pasión en un propósito de vida y un negocio con libertad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary-purple: #5A189A;
+  --accent-fuchsia: #B5179E;
+  --bright-pink: #F72585;
+  --soft-turquoise: #4CC9F0;
+  --deep-bg: #10002B;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --text-dark: #240046;
+  --text-muted: #48cae4;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Plus Jakarta Sans', sans-serif;
+  color:var(--text-dark);
+  background: linear-gradient(135deg, #f8f9fa 0%, #f1e6ff 100%);
+  line-height:1.7;
+  font-size:17px;
+}
+
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:70px 0}
+section.alt{background: linear-gradient(180deg, rgba(90,24,154,0.03) 0%, rgba(247,37,133,0.05) 100%)}
+
+h1,h2,h3{font-family:'Plus Jakarta Sans', sans-serif;color:var(--primary-purple);line-height:1.2;font-weight:800}
+h2{font-size:clamp(1.6rem, 5vw, 2.3rem);text-align:center;margin-bottom:20px;text-wrap:balance}
+p{max-width:70ch;margin-left:auto;margin-right:auto}
+.center{text-align:center}
+
+/* BOTONES ESTILO CRISTAL FUTURISTA (GLASSMORPHISM) */
+.btn-glass {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(181, 23, 158, 0.9), rgba(90, 24, 154, 0.9));
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 36px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 15px 35px rgba(181, 23, 158, 0.35), inset 0 2px 6px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+.btn-glass:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(181, 23, 158, 0.5), inset 0 2px 10px rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, rgba(247, 37, 133, 0.95), rgba(90, 24, 154, 0.95));
+}
+.btn-glass.big {
+  display: block;
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 22px;
+}
+
+/* MARCOS Y CONTENEDORES DE CRISTAL */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(181, 23, 158, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(90, 24, 154, 0.08);
+  transition: transform 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--bright-pink);
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 40px 0 70px;
+  text-align: center;
+  background: radial-gradient(circle at top, rgba(181,23,158,0.1) 0%, transparent 70%);
+}
+.banner-container {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(90,24,154,0.15);
+  margin-bottom: 30px;
+  border: 2px solid rgba(255,255,255,0.8);
+}
+.badge-tag {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent-fuchsia), var(--primary-purple));
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(181,23,158,0.3);
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  max-width: 22ch;
+  margin: 0 auto 20px;
+  text-wrap: balance;
+}
+.hero p.sub {
+  font-size: 1.1rem;
+  color: #4A4A4A;
+  margin-bottom: 35px;
+  max-width: 65ch;
+}
+
+/* SECCIÓN REFLEXIÓN / EMPATÍA */
+.cards-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-top: 30px;
+}
+.card-empathy {
+  background: #fff;
+  border-left: 6px solid var(--bright-pink);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+}
+.card-empathy h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--accent-fuchsia);
+}
+
+/* PILARES / PASOS */
+.steps-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  counter-reset: step-count;
+}
+.step-item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 24px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(90,24,154,0.06);
+  border: 1px solid rgba(76,201,240,0.3);
+}
+.step-item::before {
+  counter-increment: step-count;
+  content: "0" counter(step-count);
+  position: absolute;
+  top: -15px;
+  left: 24px;
+  background: linear-gradient(135deg, var(--soft-turquoise), var(--primary-purple));
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(76,201,240,0.4);
+}
+.step-item h3 { margin-top: 10px; margin-bottom: 8px; }
+
+/* TESTIMONIOS */
+.testimonials-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+.testimonial-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  border: 1px solid rgba(181,23,158,0.1);
+}
+.testimonial-card p { font-style: italic; font-size: 0.98rem; margin-bottom: 14px; color: #333; }
+.testimonial-card b { color: var(--primary-purple); display: block; }
+.testimonial-card span { font-size: 0.85px; color: #777; }
+
+/* FOOTER */
+footer {
+  background: var(--deep-bg);
+  color: #e0aaff;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+}
+footer .footer-name { color: #fff; font-weight: 700; margin-bottom: 12px; }
+footer .legal { font-size: 0.75rem; color: #c77dff; max-width: 650px; margin: 0 auto; line-height: 1.6; }
+
+@media(min-width: 768px) {
+  section { padding: 90px 0; }
+  .cards-grid, .steps-grid { grid-template-columns: repeat(3, 1fr); }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media(min-width: 1024px) {
+  .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="banner-container">
+      <img src="PEGA_AQUÍ_EL_LINK_DIRECTO_DE_TU_BANNER" alt="Mujeres con Propósito y Fe">
+    </div>
+    <span class="badge-tag">✨ Tu fe es tu poder, tu propósito tu guía ✨</span>
+    <h1>NO EXISTE PROCESO SIN UN PROPÓSITO</h1>
+    <p class="sub">Un espacio seguro, elegante y transformador diseñado para nosotras. Descubre cómo equilibrar tu bienestar, tu familia y la oportunidad de construir un ingreso independiente con gracia, liderazgo y un sistema comprobado.</p>
+    <a class="btn-glass" href="https://wa.me/522218620111?text=Hola%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20el%20espacio%20para%20mujeres%20con%20prop%C3%B3sito" target="_blank" rel="noopener">INICIAR MI CAMINO (VER DETALLES)</a>
+  </div>
+</header>
+
+<!-- REFLEXIÓN / EMPATÍA -->
+<section class="alt">
+  <div class="wrap">
+    <h2>¿TE SIENTES IDENTIFICADA CON ESTO?</h2>
+    <div class="cards-grid">
+      <div class="glass-card">
+        <h3>El Desafío del Tiempo</h3>
+        <p>Das el 100% en el hogar o en tu empleo actual, pero sientes que tus propios sueños y tu independencia financiera se van quedando en pausa.</p>
+      </div>
+      <div class="glass-card">
+        <h3>Búsqueda de Valor</h3>
+        <p>Sabes que tienes talentos únicos, fe y capacidad para lograr grandes cosas, pero a veces falta la guía o el vehículo correcto para brillar.</p>
+      </div>
+      <div class="glass-card">
+        <h3>Deseo de Inspirar</h3>
+        <p>Quieres un futuro próspero donde tus hijos o seres queridos vean en ti a una mujer realizada, fuerte y dueña de su propio tiempo.</p>
+      </div>
+    </div>
+    <p class="center" style="margin-top: 35px; font-weight: 600; color: var(--primary-purple); font-size: 1.1rem;">Comprender esto es el primer paso. Hoy puedes transformar tu proceso en tu mayor victoria.</p>
+  </div>
+</section>
+
+<!-- FILOSOFÍA Y VALOR -->
+<section>
+  <div class="wrap glass-card" style="background: rgba(255,255,255,0.9); border: 2px solid rgba(181,23,158,0.2);">
+    <h2 style="margin-bottom: 15px;">UN VEHÍCULO DE ÉLITE CREADO PARA TU CRECIMIENTO</h2>
+    <p class="center" style="margin-bottom: 25px;">No se trata solo de emprender; se trata de hacerlo con respaldo científico internacional, valores sólidos y una comunidad que te abraza y te impulsa a crecer sin descuidar lo que más amas.</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; font-weight: 600; color: var(--primary-purple);">
+      <span style="background: #f3e8ff; padding: 10px 20px; border-radius: 30px;">🌸 Respaldo Internacional en 31 Países</span>
+      <span style="background: #f3e8ff; padding: 10px 20px; border-radius: 30px;">💎 Ciencia y Bienestar Comprobados</span>
+      <span style="background: #f3e8ff; padding: 10px 20px; border-radius: 30px;">🤝 Mentoría Cercana y Empática</span>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO / PASOS -->
+<section class="alt">
+  <div class="wrap">
+    <h2>EL MÉTODO SUAVE Y DUPLICABLE</h2>
+    <div class="steps-grid">
+      <div class="step-item">
+        <h3>1. APRENDIZAJE AMABLE</h3>
+        <p>Espacios cortos de capacitación a tu propio ritmo, adaptados a tus tiempos y rutinas diarias.</p>
+      </div>
+      <div class="step-item">
+        <h3>2. COMPARTIR CON ALMA</h3>
+        <p>Utilizamos herramientas digitales elegantes para conectar con otras mujeres que buscan bienestar y oportunidad.</p>
+      </div>
+      <div class="step-item">
+        <h3>3. CRECIMIENTO EN TRIBU</h3>
+        <p>Avanzamos juntas, celebrando cada logro y construyendo estabilidad financiera paso a paso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section>
+  <div class="wrap">
+    <h2>HISTORIAS DE MUJERES QUE DIERON EL PASO</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>“Encontré un espacio donde mi fe, mi familia y mis deseos de superación van de la mano. Hoy genero un ingreso extra con total libertad.”</p>
+        <b>Carmen R.</b><span>Madre de familia</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“El sistema es tan claro y el apoyo tan humano que cualquier mujer con ganas de salir adelante puede lograrlo. Me siento renovada.”</p>
+        <b>Sofía M.</b><span>Emprendedora</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“Pasé de la incertidumbre a tener un propósito claro y un negocio internacional que manejo directo desde mi celular.”</p>
+        <b>Laura V.</b><span>Profesionista</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="alt" style="text-align: center;">
+  <div class="wrap">
+    <h2>TU HISTORIA DE ÉXITO COMIENZA AQUÍ</h2>
+    <p style="margin-bottom: 25px; color: #555;">Tenemos espacios limitados esta semana para brindarte atención personalizada y conocer tus metas en una charla cálida de 40 minutos.</p>
+    <a class="btn-glass big" href="https://wa.me/522218620111?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20mi%20espacio%20de%20conversaci%C3%B3n%20por%20Zoom" target="_blank" rel="noopener">AGENDAR MI ESPACIO POR ZOOM 💜</a>
+  </div>
+</section>
+
+<footer>
+  <p class="footer-name">Alberto Torres | Mentor de Negocios y Bienestar | Espacio de Liderazgo Femenino</p>
+  <p class="legal">Aviso: Los resultados de ingresos varían según el esfuerzo, dedicación y compromiso personal de cada integrante. Nuestro compromiso es brindarte el mejor vehículo y mentoría.</p>
+</footer>
+
+</body>
+</html>
