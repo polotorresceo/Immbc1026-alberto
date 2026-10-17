@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyecto 15k+ Monterrey | Alberto Torres</title>
+<meta name="description" content="Descubre cómo generar un segundo ingreso con un negocio internacional sin dejar tu actividad actual. Agenda tu cita por Zoom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#040912;--bg2:#08162B;--ink:#E8EEF7;--mute:#9FB0C7;
+  --cyan:#5CE1FF;--blue:#2F7BFF;--gold:#F0CF7E;--gold-d:#C9A24B;
+  --wa:#25D366;--wa-glow:rgba(37,211,102,.55);
+  --glass:rgba(40,110,230,.16);--glass-line:rgba(92,225,255,.38);--panel:rgba(255,255,255,.04);--panel-line:rgba(255,255,255,.09)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter','Roboto',Arial,sans-serif;color:var(--ink);line-height:1.65;font-size:17px;-webkit-text-size-adjust:100%;
+  background:radial-gradient(1100px 600px at 80% -10%,rgba(47,123,255,.22),transparent 60%),radial-gradient(900px 500px at -10% 30%,rgba(92,225,255,.10),transparent 60%),linear-gradient(180deg,var(--bg) 0%,var(--bg2) 50%,var(--bg) 100%);
+  background-attachment:fixed}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:60px 0;position:relative}
+section.alt{background:linear-gradient(180deg,transparent,rgba(92,225,255,.045),transparent);border-top:1px solid var(--panel-line);border-bottom:1px solid var(--panel-line)}
+h1,h2,h3{line-height:1.2;font-weight:800;color:#fff}
+p{max-width:68ch}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+
+/* Títulos en cristal azul */
+h2,.hero h1{
+  display:block;width:fit-content;max-width:100%;margin:0 auto 32px;text-align:center;text-wrap:balance;
+  padding:20px 26px;border-radius:20px;color:var(--gold);
+  background:linear-gradient(135deg,rgba(60,140,255,.26),rgba(20,60,140,.14));
+  -webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%);
+  border:1px solid var(--glass-line);
+  box-shadow:0 0 0 1px rgba(255,255,255,.05) inset,0 1px 0 rgba(255,255,255,.35) inset,0 0 28px rgba(92,225,255,.20),0 18px 40px rgba(0,0,0,.45);
+  text-shadow:0 0 18px rgba(240,207,126,.35)}
+h2{font-size:clamp(1.4rem,5.2vw,2.1rem)}
+
+/* CTA futurista */
+.btn{display:inline-block;position:relative;color:#04210F;font-weight:800;text-decoration:none;text-align:center;padding:18px 32px;border-radius:16px;font-size:1.05rem;
+  background:linear-gradient(135deg,#3CF08A,var(--wa) 55%,#12B85A);
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:0 0 22px var(--wa-glow),0 10px 30px rgba(0,0,0,.45),0 1px 0 rgba(255,255,255,.5) inset;
+  transition:transform .25s,box-shadow .25s,filter .25s;animation:pulse 2.8s ease-in-out infinite}
+.btn:hover{transform:translateY(-3px) scale(1.02);filter:brightness(1.08);box-shadow:0 0 40px var(--wa-glow),0 0 80px rgba(37,211,102,.30),0 14px 34px rgba(0,0,0,.5)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.btn.big{display:block;max-width:660px;margin:32px auto 0;padding:26px 22px;font-size:clamp(1.05rem,4.6vw,1.35rem);border-radius:22px}
+@keyframes pulse{0%,100%{box-shadow:0 0 18px var(--wa-glow),0 10px 30px rgba(0,0,0,.45),0 1px 0 rgba(255,255,255,.5) inset}50%{box-shadow:0 0 36px var(--wa-glow),0 10px 30px rgba(0,0,0,.45),0 1px 0 rgba(255,255,255,.5) inset}}
+
+/* Hero */
+.hero{padding:0 0 64px;text-align:center;position:relative}
+.banner{width:100%;max-height:440px;object-fit:cover;min-height:140px;background:var(--bg2);border-bottom:1px solid var(--glass-line);box-shadow:0 10px 50px rgba(47,123,255,.25)}
+.firma{margin:32px auto 18px;font-weight:600;font-size:.86rem;color:var(--gold);letter-spacing:.06em;text-shadow:0 0 14px rgba(240,207,126,.4)}
+.hero h1{font-size:clamp(1.6rem,6.2vw,2.7rem);max-width:21ch;margin-bottom:22px}
+.hero p.sub{margin:0 auto 34px;font-size:1.05rem;color:var(--ink)}
+
+/* Dolor */
+.cards{display:grid;gap:18px;grid-template-columns:1fr}
+.card{background:var(--panel);border:1px solid var(--panel-line);border-top:2px solid var(--cyan);border-radius:18px;padding:26px;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.card h3{font-size:1.05rem;margin-bottom:8px;color:var(--gold)}
+.card p{color:var(--ink)}
+.cierre{margin:36px auto 0;text-align:center;font-weight:600;color:var(--gold);font-size:1.12rem;text-shadow:0 0 16px rgba(240,207,126,.3)}
+
+/* Mindset */
+.compare{display:grid;gap:16px;grid-template-columns:1fr;margin:28px 0}
+.compare div{padding:24px;border-radius:18px;border:1px solid var(--panel-line);background:var(--panel);color:var(--mute)}
+.compare div.win{background:linear-gradient(135deg,rgba(60,140,255,.28),rgba(20,60,140,.15));border-color:var(--glass-line);color:var(--ink);box-shadow:0 0 30px rgba(92,225,255,.18)}
+.compare strong{display:block;font-size:1.08rem;margin-bottom:6px;color:#fff}
+.compare .win strong{color:var(--gold)}
+.pregunta{font-size:1.25rem;font-weight:800;color:var(--gold);text-align:center;margin:0 auto;text-shadow:0 0 16px rgba(240,207,126,.3)}
+
+/* Élite */
+.elite ul{list-style:none;display:grid;gap:12px;max-width:660px;margin:0 auto}
+.elite li{background:var(--panel);border:1px solid var(--panel-line);padding:17px 18px 17px 58px;border-radius:16px;position:relative;font-weight:600;color:#fff;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.elite li::before{content:"✓";position:absolute;left:16px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#1b1403;display:grid;place-items:center;font-size:.9rem;box-shadow:0 0 14px rgba(240,207,126,.5)}
+
+/* Sistema */
+.steps{display:grid;gap:26px;grid-template-columns:1fr;counter-reset:s}
+.step{background:var(--panel);border:1px solid var(--glass-line);border-radius:18px;padding:34px 24px 26px;position:relative;box-shadow:0 0 26px rgba(92,225,255,.10),0 14px 34px rgba(0,0,0,.35)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-20px;left:22px;width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#1b1403;font-weight:800;display:grid;place-items:center;box-shadow:0 0 18px rgba(240,207,126,.55)}
+.step h3{margin-bottom:6px;font-size:1.15rem;color:var(--gold)}
+
+/* Banner 3 fotos */
+.fotos{padding:20px 0 40px}
+.grid-f{display:grid;gap:22px;grid-template-columns:1fr}
+.foto{background:var(--panel);border:1px solid var(--panel-line);border-radius:18px;overflow:hidden;box-shadow:0 16px 38px rgba(0,0,0,.4);transition:transform .3s,border-color .3s,box-shadow .3s}
+.foto:hover{transform:translateY(-4px);border-color:var(--glass-line);box-shadow:0 0 30px rgba(92,225,255,.22),0 16px 38px rgba(0,0,0,.4)}
+.foto .img{position:relative}
+.foto img{width:100%;aspect-ratio:4/3;object-fit:cover;background:linear-gradient(135deg,#0c1f3d,#12335f)}
+.etq{display:flex;font-size:.8rem;font-weight:600}
+.etq span{padding:9px 14px}
+.etq .f{background:rgba(255,255,255,.08);color:var(--mute)}
+.etq .c{background:rgba(47,123,255,.35);color:var(--cyan);flex:1}
+.foto h3{padding:18px 18px 22px;font-size:1.08rem;color:#fff;text-wrap:balance}
+
+/* Testimonios */
+.grid-t{display:grid;gap:16px;grid-template-columns:1fr}
+.t{background:var(--panel);border:1px solid var(--panel-line);border-radius:18px;padding:22px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.t p{font-size:.97rem;margin-bottom:14px;color:var(--ink)}
+.t b{color:var(--gold);display:block;font-size:.97rem}
+.t span{font-size:.82rem;color:var(--mute)}
+
+/* Cierre */
+.final{text-align:center}
+.final p{margin:0 auto 12px}
+.urg{font-weight:600;color:var(--gold);text-shadow:0 0 14px rgba(240,207,126,.3)}
+footer{background:#02060D;border-top:1px solid var(--glass-line);color:var(--mute);text-align:center;padding:40px 20px;font-size:.92rem;box-shadow:0 -10px 40px rgba(47,123,255,.12)}
+footer .firma-inst{color:var(--gold);font-weight:600;margin:0 auto 16px}
+footer .legal{font-size:.75rem;line-height:1.55;color:#7d8da5;max-width:640px;margin:0 auto}
+
+@media(min-width:700px){
+  body{font-size:18px}
+  section{padding:84px 0}
+  .cards,.steps,.grid-f{grid-template-columns:repeat(3,1fr)}
+  .grid-t{grid-template-columns:repeat(2,1fr)}
+  .compare{grid-template-columns:1fr 1fr}
+}
+@media(min-width:960px){.grid-t{grid-template-columns:repeat(3,1fr)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- 1. HERO -->
+<header class="hero">
+  <img class="banner" src="PEGA_AQUÍ_EL_LINK_DIRECTO_DE_TU_BANNER_EN_IMGBB" alt="Proyecto 15k+ Monterrey">
+  <div class="wrap">
+    <p class="firma center">SOY ALBERTO TORRES - MENTOR DE NEGOCIO INTERNACIONAL</p>
+    <h1>¿ESTÁS CAMBIANDO 8 HORAS DE TU VIDA POR UN SUELDO QUE YA NO ALCANZA?</h1>
+    <p class="sub">Descubre cómo personas comunes en Monterrey —amas de casa, maestros, jubilados y empleados— están generando un segundo ingreso de $15,000 a $35,000 al mes convirtiéndose en dueñas de un negocio internacional con presencia en 31 países, sin dejar su actividad actual.</p>
+    <a class="btn" href="https://wa.me/522218620111?text=Hola%2C%20vi%20el%20panel%20completo%20de%20los%2015k%2B%20y%20quiero%20agendar%20mi%20cita%20Zoom%20de%2040%20min" target="_blank" rel="noopener">VER CÓMO FUNCIONA (20 MIN)</a>
+  </div>
+</header>
+
+<!-- 2. DOLOR -->
+<section class="alt">
+  <div class="wrap">
+    <h2>¿TE SUENA FAMILIAR?</h2>
+    <div class="cards">
+      <div class="card"><h3>Ama de casa</h3><p>La escuela de los niños subió. El súper subió. La renta subió. Tu ingreso se quedó igual.</p></div>
+      <div class="card"><h3>Empleado</h3><p>Te levantas a las 6am, regresas a las 8pm. Trabajas para los sueños de otro. Y a fin de mes, te queda $0.</p></div>
+      <div class="card"><h3>Jubilado</h3><p>Trabajaste 30 años. Te dieron las gracias y una pensión de $6,500. ¿Eso vale tu vida de esfuerzo?</p></div>
+    </div>
+    <p class="cierre">Si dijiste SÍ a una de estas, no es tu culpa. Es el sistema. Pero hoy puedes cambiar de sistema.</p>
+  </div>
+</section>
+
+<!-- 3. MINDSET -->
+<section>
+  <div class="wrap">
+    <h2>LA DIFERENCIA ENTRE BUSCAR UN EMPLEO Y CONSTRUIR UN ACTIVO</h2>
+    <p class="center">Un empleo te paga una sola vez por cada hora que trabajas: si dejas de ir, el cheque se detiene. Un negocio con sistema funciona distinto: lo construyes una vez y genera ingresos residuales constantes, que te acercan a la libertad de tiempo y a la libertad financiera.</p>
+    <div class="compare">
+      <div><strong>Empleo</strong>Pagas con tu tiempo. Un cheque por hora trabajada.</div>
+      <div class="win"><strong>Negocio con sistema</strong>Construyes una vez. Ingresos residuales constantes.</div>
+    </div>
+    <p class="pregunta">¿Tú qué prefieres? ¿Seguir buscando cheques o empezar a construir tu activo?</p>
+  </div>
+</section>
+
+<!-- 4. SOLUCIÓN ÉLITE -->
+<section class="alt elite">
+  <div class="wrap">
+    <h2>NO ES UN PRODUCTO MÁS. ES UN VEHÍCULO DE ÉLITE MUNDIAL.</h2>
+    <ul>
+      <li>45+ años de investigación</li>
+      <li>Corporativo en Canadá</li>
+      <li>Laboratorios propios en USA</li>
+      <li>Presencia en 31 países</li>
+      <li>Patentes científicas</li>
+      <li>Sistema duplicable de mentores</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5. SISTEMA 3x3x3 -->
+<section>
+  <div class="wrap">
+    <h2>EL SISTEMA 3x3x3 — COPIAR Y PEGAR</h2>
+    <div class="steps">
+      <div class="step"><h3>APRENDES</h3><p>30 minutos diarios de capacitación.</p></div>
+      <div class="step"><h3>COMPARTES</h3><p>2 videos al día con tu lista de contactos.</p></div>
+      <div class="step"><h3>DUPLICAS</h3><p>Ayudas a tus 3 primeros socios a lograr el rango Plata y su cheque residual de $5k a $15k+.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER DE 3 FOTOS (antes de testimonios) -->
+<section class="fotos">
+  <div class="wrap">
+    <div class="grid-f">
+      <article class="foto">
+        <div class="img"><img src="PEGA_AQUÍ_EL_LINK_IMGBB_1" alt="Foto 1" loading="lazy"></div>
+        <div class="etq"><span class="f">Proyecto 15k+</span><span class="c">Comunidad</span></div>
+        <h3>Emprendedores de Monterrey construyendo juntos</h3>
+      </article>
+      <article class="foto">
+        <div class="img"><img src="PEGA_AQUÍ_EL_LINK_IMGBB_2" alt="Foto 2" loading="lazy"></div>
+        <div class="etq"><span class="f">Proyecto 15k+</span><span class="c">Capacitación</span></div>
+        <h3>Aprende paso a paso, desde tu celular</h3>
+      </article>
+      <article class="foto">
+        <div class="img"><img src="PEGA_AQUÍ_EL_LINK_IMGBB_3" alt="Foto 3" loading="lazy"></div>
+        <div class="etq"><span class="f">Proyecto 15k+</span><span class="c">Mentoría</span></div>
+        <h3>Acompañamiento personalizado 1 a 1</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 6. PRUEBA SOCIAL -->
+<section class="alt">
+  <div class="wrap">
+    <h2>ELLOS YA LO HICIERON. NO SON ESPECIALES, SOLO TOMARON LA DECISIÓN.</h2>
+    <!-- IMPORTANTE: reemplaza estos textos de ejemplo por testimonios reales y autorizados de tu equipo. -->
+    <div class="grid-t">
+      <div class="t"><p>“Empecé con 30 minutos al día después de clases. Hoy tengo un ingreso extra que antes no imaginaba.”</p><b>Ana L.</b><span>Maestra</span></div>
+      <div class="t"><p>“Por fin entendí la diferencia entre trabajar por horas y construir algo propio.”</p><b>C.P. Jorge T.</b><span>Contador</span></div>
+      <div class="t"><p>“Con mi pensión no alcanzaba. Ahora tengo un ingreso adicional y mi tiempo es mío.”</p><b>Don Rogelio</b><span>Jubilado IMSS</span></div>
+      <div class="t"><p>“Lo hago desde mi casa mientras mis hijos están en la escuela.”</p><b>Claudia M.</b><span>Ama de casa</span></div>
+      <div class="t"><p>“Sigo en mi empleo y ya tengo un segundo ingreso creciendo cada mes.”</p><b>Luis R.</b><span>Empleado administrativo</span></div>
+      <div class="t"><p>“El sistema es sencillo: aprender, compartir y duplicar. Cualquiera puede seguirlo.”</p><b>Marisol G.</b><span>Estilista</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CIERRE -->
+<section class="final">
+  <div class="wrap">
+    <h2>ESTE PANEL ERA SOLO EL FILTRO.</h2>
+    <p class="urg">Solo tenemos 10 lugares esta semana para dar mentoría personalizada 1 a 1...</p>
+    <p>El siguiente paso es una cita privada por Zoom de 40 minutos conmigo.</p>
+    <a class="btn big" href="https://wa.me/522218620111?text=Hola%2C%20vi%20el%20panel%20completo%20de%20los%2015k%2B%20y%20quiero%20agendar%20mi%20cita%20Zoom%20de%2040%20min" target="_blank" rel="noopener">SÍ, QUIERO AGENDAR MI CITA DE 40 MIN POR ZOOM</a>
+  </div>
+</section>
+
+<footer>
+  <p class="firma-inst">Alberto Torres | Consultor Independiente Immunotec | Proyecto 15k+ Monterrey | WhatsApp: 221 862 0111</p>
+  <p class="legal">Aviso: Los ingresos mencionados son ilustrativos del Plan de Compensación de Immunotec y dependen 100% del esfuerzo, trabajo y habilidades de cada persona. Immunotec no garantiza ingresos.</p>
+</footer>
+
+</body>
+</html>
